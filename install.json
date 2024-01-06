@@ -1,9 +1,9 @@
 {
-    "requires": [{ "type": "conda", "name": ["ffmpeg", "spleeter"], "args": "-c conda-forge" }],
+    "requires": [{ "type": "conda", "name": ["ffmpeg"], "args": "-c conda-forge" }],
     "run": [{
       "method": "shell.run",
       "params": {
-        "message": "git clone https://github.com/deezer/spleeter"
+        "message": "git clone https://github.com/deezer/spleeter.git"
       }
     }, {
       "method": "shell.run",
@@ -11,7 +11,7 @@
         "path": "spleeter",
         "venv": "venv",
         "message": [
-          "pip install -r requirements.txt"
+          "pip install spleeter"
         ]
       }
     }, {
